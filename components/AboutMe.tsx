@@ -43,9 +43,9 @@ export default function AboutMe() {
           "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent flex flex-col space-y-4 md:row-span-6"
         )}
       >
-        <h6 className="text-lg font-bold">About Me</h6>
+        <h6 className="text-lg font-bold dark:text-white">About Me</h6>
         <div className="flex flex-col justify-between h-full">
-          <div className="flex-row text-base font-light m-0">
+          <div className="flex-row text-base font-light m-0 dark:text-white">
             Hi, I&apos;m <span className="font-bold">Sodiq Ardianto</span>, a
             Software Engineer specialized in web development. I&apos;m
             passionate about creating innovative and user-friendly web

@@ -24,10 +24,10 @@ export default function Project() {
         )}
       >
         <div className="flex justify-between">
-          <h6 className="text-lg font-bold">Project</h6>
+          <h6 className="text-lg font-bold dark:text-white">Project</h6>
           <h6 className="text-lg font-bold">
             <Link href="/projects">
-              <IconWindowMaximize className="h-5 w-5 inline" />
+              <IconWindowMaximize className="h-5 w-5 inline dark:text-white" />
             </Link>
           </h6>
         </div>

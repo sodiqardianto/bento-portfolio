@@ -14,10 +14,10 @@ export default function Blog() {
         )}
       >
         <div className="flex justify-between">
-          <h6 className="text-lg font-bold">Blog</h6>
+          <h6 className="text-lg font-bold dark:text-white">Blog</h6>
           <h6 className="text-lg font-bold">
             <Link href="/blogs">
-              <IconWindowMaximize className="h-5 w-5 inline" />
+              <IconWindowMaximize className="h-5 w-5 inline dark:text-white" />
             </Link>
           </h6>
         </div>
@@ -43,7 +43,7 @@ export default function Blog() {
                   </p>
                 </div>
               </div>
-              <button className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-blue-500 hover:text-white text-black mt-4 md:mt-0">
+              <button className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-blue-500 hover:text-white text-black mt-4 md:mt-0 dark:bg-neutral-800 dark:text-white">
                 Read more
               </button>
             </div>
