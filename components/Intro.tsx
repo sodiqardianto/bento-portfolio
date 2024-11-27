@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { cn } from "@/lib/utils";
+import React, { createElement } from "react";
 import { TypeAnimation } from "react-type-animation";
 import {
   IconBrandGithub,
@@ -9,21 +8,47 @@ import {
   IconBrandTiktok,
   IconBrandYoutube,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Intro() {
+  const socials = [
+    {
+      name: "Github",
+      url: "https://github.com/sodiqardianto",
+      icon: IconBrandGithub,
+    },
+    {
+      name: "Linkedin",
+      url: "https://www.linkedin.com/in/sodiqardianto/",
+      icon: IconBrandLinkedin,
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/sodiqardianto/",
+      icon: IconBrandInstagram,
+    },
+    {
+      name: "Tiktok",
+      url: "https://www.tiktok.com/@sodiqardianto",
+      icon: IconBrandTiktok,
+    },
+    {
+      name: "Youtube",
+      url: "https://www.youtube.com/@sodiqardianto",
+      icon: IconBrandYoutube,
+    },
+  ];
+
   return (
     <>
-      <div
-        className={cn(
-          "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent flex flex-col space-y-4 md:col-span-3 md:row-span-4 "
-        )}
-      >
+      <div className="md:col-span-3 md:row-span-2 bg-white dark:bg-zinc-900 p-6 text-white border border-zinc-400 hover:border-blue-500 rounded-lg min-h-56">
         <h6 className="text-sm font-light text-gray-500 dark:text-gray-400">
           welcome
         </h6>
-        <div className="flex flex-col justify-between h-full">
-          <div className="flex-row text-xl font-light m-0 dark:text-white">
-            Hi, I&apos;m <span className="font-bold">Sodiq Ardianto</span>, a{" "}
+        <div className="flex flex-col justify-between h-full pb-4">
+          <div className="flex-row text-xl font-light m-0 text-black dark:text-white">
+            Hi, I&apos;m <span className="font-bold">Sodiq Ardianto</span>, a
+            passionate{" "}
             <TypeAnimation
               sequence={[
                 "Fullstack Developer",
@@ -42,25 +67,27 @@ export default function Intro() {
               repeat={Infinity}
             />{" "}
             <br />
-            specialized in web development. I love creating beautiful and
-            functional websites and applications.
+            specializing in web development. I enjoy creating responsive and
+            functional websites that deliver seamless user experiences. Beyond
+            coding, I love exploring new technologies and tackling challenges
+            with creative solutions.
           </div>
           <div className="flex gap-2">
-            <button className="px-2 py-2 rounded-md bg-blue-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-blue-500">
-              <IconBrandGithub className="h-5 w-5 inline" />
-            </button>
-            <button className="px-2 py-2 rounded-md bg-blue-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-blue-500">
-              <IconBrandLinkedin className="h-5 w-5 inline" />
-            </button>
-            <button className="px-2 py-2 rounded-md bg-blue-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-blue-500">
-              <IconBrandInstagram className="h-5 w-5 inline" />
-            </button>
-            <button className="px-2 py-2 rounded-md bg-blue-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-blue-500">
-              <IconBrandTiktok className="h-5 w-5 inline" />
-            </button>
-            <button className="px-2 py-2 rounded-md bg-blue-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-blue-500">
-              <IconBrandYoutube className="h-5 w-5 inline" />
-            </button>
+            {socials.map((item, index) => (
+              <Link
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  key={index}
+                  className="p-2 bg-blue-600/20 hover:bg-blue-600/30 text-blue-500 rounded-lg"
+                >
+                  {createElement(item.icon, { className: "h-5 w-5" })}
+                </button>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

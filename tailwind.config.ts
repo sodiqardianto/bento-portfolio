@@ -3,6 +3,7 @@
 import type { Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import scrollbar from "tailwind-scrollbar";
 
 const config: Config = {
   content: [
@@ -20,6 +21,7 @@ const config: Config = {
     },
   },
   plugins: [
+    scrollbar,
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
