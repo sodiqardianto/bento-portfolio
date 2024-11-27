@@ -5,8 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { limit45Alfhabet } from "@/app/utils/limit45Alfhabet";
 
+type BlogType = {
+  title: string;
+  description: string;
+  image: string;
+};
+
 export default function Blog() {
-  const blogs = [
+  const blogs: BlogType[] = [
     // {
     //   title: "Lana Del Rey",
     //   description: "Lorem ipsum dolor sit amet consectetur elit.",

@@ -4,8 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
 import { limit45Alfhabet } from "@/app/utils/limit45Alfhabet";
+
+type ProjectType = {
+  img: string;
+  title: string;
+};
 export default function Project() {
-  const projects = [
+  const projects: ProjectType[] = [
     // {
     //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
     //   title: "Starter Template Laravel 11",
