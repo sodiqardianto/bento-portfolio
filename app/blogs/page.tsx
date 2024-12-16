@@ -44,7 +44,7 @@ export default function Blogs() {
         </div>
 
         {blogs?.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full w-full bg-white py-20 border border-zinc-400 hover:border-blue-500 rounded-2xl ">
+          <div className="flex flex-col items-center justify-center h-full w-full bg-white dark:bg-zinc-900 py-20 border border-zinc-400 hover:border-blue-500 rounded-2xl ">
             <h1 className="text-2xl font-bold text-black dark:text-white">
               No blog posts available
             </h1>

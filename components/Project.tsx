@@ -4,38 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { IconExternalLink } from "@tabler/icons-react";
 import { limit45Alfhabet } from "@/app/utils/limit45Alfhabet";
+import { ProjectInterface } from "@/interfaces/projects.interface";
 
-type ProjectType = {
-  img: string;
-  title: string;
-};
 export default function Project() {
-  const projects: ProjectType[] = [
-    // {
-    //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    //   title: "Starter Template Laravel 11",
-    // },
-    // {
-    //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    //   title: "Modern Portfolio with Next.js 13",
-    // },
-    // {
-    //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    //   title: "Starter Template Laravel 11",
-    // },
-    // {
-    //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    //   title: "Modern Portfolio with Next.js 13",
-    // },
-    // {
-    //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    //   title: "Starter Template Laravel 11",
-    // },
-    // {
-    //   img: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    //   title: "Modern Portfolio with Next.js 13",
-    // },
-  ];
+  const projects: ProjectInterface[] = [];
 
   return (
     <>
@@ -67,7 +39,7 @@ export default function Project() {
                       <Image
                         width={100}
                         height={100}
-                        src={project.img}
+                        src={project.image}
                         alt={project.title}
                         className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top min-w-14 min-h-14"
                       />

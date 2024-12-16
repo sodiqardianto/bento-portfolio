@@ -4,38 +4,10 @@ import { IconExternalLink } from "@tabler/icons-react";
 import Link from "next/link";
 import Image from "next/image";
 import { limit45Alfhabet } from "@/app/utils/limit45Alfhabet";
-
-type BlogType = {
-  title: string;
-  description: string;
-  image: string;
-};
+import { BlogInterface } from "@/interfaces/blogs.interface";
 
 export default function Blog() {
-  const blogs: BlogType[] = [
-    // {
-    //   title: "Lana Del Rey",
-    //   description: "Lorem ipsum dolor sit amet consectetur elit.",
-    //   image: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    // },
-    // {
-    //   title: "Lana Del Rey",
-    //   description: "Lorem ipsum dolor sit amet adipisicing elit.",
-    //   image: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    // },
-    // {
-    //   title: "Billie Eilish",
-    //   description:
-    //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, vitae explicabo magnam cumque sequi voluptatem facilis suscipit tempore optio dolores distinctio doloribus quia odit amet nobis asperiores totam, laborum exercitationem.",
-    //   image: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    // },
-    // {
-    //   title: "Taylor Swift",
-    //   description:
-    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et urna at nunc consequat interdum.",
-    //   image: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    // },
-  ];
+  const blogs: BlogInterface[] = [];
 
   return (
     <>
